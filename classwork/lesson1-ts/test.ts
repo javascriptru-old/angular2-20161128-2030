@@ -25,7 +25,7 @@ export namespace Lesson1 {
 
 //void
 //function setName(name: string): void {
-//   this.name = name; 
+//   this.name = name; c
 //}
 
 interface IBook {
