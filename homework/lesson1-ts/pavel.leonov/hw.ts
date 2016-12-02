@@ -1,9 +1,11 @@
 interface IEmployee {
+    id: number;
     name: string;
     calcMonthlyIncome(): number;
 }
 
 interface IShortEmployee {
+    id: number;
     name: string;
     monthlyIncome: number;
 }
@@ -23,6 +25,7 @@ interface IEmployeeList {
 }
 
 class HourlyPaymentEmployee implements IHourlyPaymentEmployee {
+    id: number;
     name: string;
     haurlyPayment: number;
 
@@ -32,6 +35,7 @@ class HourlyPaymentEmployee implements IHourlyPaymentEmployee {
 }
 
 class FixedPaymentEmployee implements IFixedPaymentEmployee {
+    id: number;
     name: string;
     fixedPayment: number;
 
@@ -54,14 +58,17 @@ class HourlyPaymentEmployeeList implements IEmployeeList {
                 }
             })
             .map(employee => ({
+                id: employee.id,
                 name: employee.name,
                 monthlyIncome: employee.calcMonthlyIncome()
             }));
     }
 
     leaders(list: IShortEmployee[]) {
-        return list.slice(0, 4);
+        return list.slice(0, 5).map(employee => employee.name);
     }
 
-
+    last3EmployeeIds(list: IShortEmployee[]) {
+        return list.slice(-3).map(employee => employee.id);
+    }
 }
