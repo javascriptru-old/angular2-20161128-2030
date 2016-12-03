@@ -1,5 +1,7 @@
 import { Emploees } from './emploees';
-import * as jsonData from './emploees.json';
+
+declare var require: any;
+let jsonData:any[] = require('./emploees.json');
 
 let emploees = new Emploees();
 
