@@ -25,6 +25,12 @@ interface IEmployeeList {
     last3Ids(list: IShortEmployee[]): number[];
 }
 
+/**
+ * Hourly-Payment Employee class
+ * 
+ * @class HourlyPaymentEmployee
+ * @implements {IHourlyPaymentEmployee}
+ */
 class HourlyPaymentEmployee implements IHourlyPaymentEmployee {
     id: number;
     name: string;
@@ -41,6 +47,12 @@ class HourlyPaymentEmployee implements IHourlyPaymentEmployee {
     }
 }
 
+/**
+ * Fixed-Payment Employee class
+ * 
+ * @class FixedPaymentEmployee
+ * @implements {IFixedPaymentEmployee}
+ */
 class FixedPaymentEmployee implements IFixedPaymentEmployee {
     id: number;
     name: string;
@@ -57,6 +69,12 @@ class FixedPaymentEmployee implements IFixedPaymentEmployee {
     }
 }
 
+/**
+ * EmployeeList class
+ * 
+ * @class EmployeeList
+ * @implements {IEmployeeList}
+ */
 class EmployeeList implements IEmployeeList {
     private list: IEmployee[];
 
