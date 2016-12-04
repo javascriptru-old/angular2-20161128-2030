@@ -1,20 +1,20 @@
 import { EmployeePerMonth } from './employeePerMonth';
 import { EmployeePerHour } from './employeePerHour';
-import { IEmployee } from './iemploee';
+import { IEmployee } from './iemployee';
 
-export class Emploees {
-    private arrEmploees:IEmployee[] = [];
+export class Employees {
+    private arrEmployees:IEmployee[] = [];
 
-    addEmploeesRandom(count: number): void {
+    addEmployeesRandom(count: number): void {
         let arrNames = ['Andrey', 'Denis', 'Yarik', 'Vitalik', 'Alina', 'Diana', 'Oleg', 'Kiril', 'Ivan', 'Karina'];
 
         for(var i = 0; i < count; i++) {
             if(i % 2 == 0) {
                 let employeePerHour = new EmployeePerHour( i, arrNames[ this.randomInteger(0, 9) ], this.randomInteger(10, 20) );
-                this.arrEmploees.push(employeePerHour);
+                this.arrEmployees.push(employeePerHour);
             } else {
                 let employeePerMonth = new EmployeePerMonth( i, arrNames[ this.randomInteger(0, 9) ], this.randomInteger(3000, 7000) );
-                this.arrEmploees.push(employeePerMonth);
+                this.arrEmployees.push(employeePerMonth);
             }
         }
 
@@ -25,7 +25,7 @@ export class Emploees {
     }
 
     sort(): void {
-        this.arrEmploees.sort( (a: any, b: any): number => {
+        this.arrEmployees.sort( (a: any, b: any): number => {
             if ( a.averagePay() < b.averagePay() ) return 1;
             if ( a.averagePay() > b.averagePay() ) return -1;
             return ( a.name > b.name )? 1 : -1;
@@ -33,33 +33,33 @@ export class Emploees {
     }
 
     print(): void {
-        this.arrEmploees.forEach( (emploee, i) => {
-            console.log(`${emploee.id} ${emploee.name} ${emploee.averagePay()}`);
+        this.arrEmployees.forEach( (employee, i) => {
+            console.log(`${employee.id} ${employee.name} ${employee.averagePay()}`);
         });
     }
 
     printFirstNames(count: number): void {
-        for(let i = 0; i < count && i < this.arrEmploees.length; i++) {
-            console.log(this.arrEmploees[i].name);
+        for(let i = 0; i < count && i < this.arrEmployees.length; i++) {
+            console.log(this.arrEmployees[i].name);
         }
     } 
 
     printLastIds(count: number): void {
-        let length = this.arrEmploees.length;
+        let length = this.arrEmployees.length;
 
         for(let i = length - count; i < length; i++) {
-            console.log(this.arrEmploees[i].id);
+            console.log(this.arrEmployees[i].id);
         }
     }  
 
-    addEmploeesFromJson(jsonData: any): void {
-        jsonData.forEach( (emploee, i) => {
-            if(emploee.paymentType == "perMonth") {
-                let employeePerMonth = new EmployeePerMonth( i, emploee.name, emploee.payment );
-                this.arrEmploees.push( employeePerMonth );
+    addEmployeesFromJson(jsonData: any): void {
+        jsonData.forEach( (employee, i) => {
+            if(employee.paymentType == "perMonth") {
+                let employeePerMonth = new EmployeePerMonth( i, employee.name, employee.payment );
+                this.arrEmployees.push( employeePerMonth );
             } else {
-                let employeePerHour = new EmployeePerHour( i, emploee.name, emploee.payment );
-                this.arrEmploees.push( employeePerHour );
+                let employeePerHour = new EmployeePerHour( i, employee.name, employee.payment );
+                this.arrEmployees.push( employeePerHour );
             }
 
         });
