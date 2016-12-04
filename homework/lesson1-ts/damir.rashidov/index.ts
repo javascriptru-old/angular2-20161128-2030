@@ -5,7 +5,7 @@ import 'console.table';
 let json:string;
 
 try {
-    let json:string = fs.readFileSync('employees.json', 'utf-8');
+    json = fs.readFileSync('employees.json', 'utf-8');
 } catch (e) {
     console.log('Не найден файл employees.json\nДля генерации запустите generateJson.js');
     process.exit(1);

@@ -32,7 +32,7 @@ for (let i = 0; i < COUNT; i++) {
         if (rand()) {
             employee.addSalary(new Date(), 1000);
         } else {
-            let monthCount = rand(5, 20);
+            let monthCount = rand(1, 5);
             let date = new Date(rand(2010, 2016), rand(1, 12));
 
             for (let j = monthCount; j > 0; j--) {
@@ -42,7 +42,7 @@ for (let i = 0; i < COUNT; i++) {
     } else if (EmployeeHourlyPayment.isInstance(employee)) {
         employee.setDefaultHourlyRate(randHourlyRate());
 
-        let dayCount = rand(100, 1000);
+        let dayCount = rand(5, 40);
         let date = new Date(rand(2010, 2016), rand(1, 12));
 
         for (let j = dayCount; j > 0; j--) {
