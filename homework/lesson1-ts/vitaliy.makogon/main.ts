@@ -1,13 +1,13 @@
-import { Emploees } from './emploees';
+import { Employees } from './employees';
 
 declare var require: any;
-let jsonData:any[] = require('./emploees.json');
+let jsonData:any[] = require('./employees.json');
 
-let emploees = new Emploees();
+let employees = new Employees();
 
-// emploees.addEmploeesRandom(10);
-emploees.addEmploeesFromJson(jsonData);
-emploees.sort();
-emploees.print();
-emploees.printFirstNames(5);
-emploees.printLastIds(3);
+// emploees.addEmployeesRandom(10);
+employees.addEmployeesFromJson(jsonData);
+employees.sort();
+employees.print();
+employees.printFirstNames(5);
+employees.printLastIds(3);
