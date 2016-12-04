@@ -2,7 +2,15 @@ import { Employee, EmployeeMonthlyPayment, EmployeeHourlyPayment } from './emplo
 import * as fs from 'fs';
 import 'console.table';
 
-let json:string = fs.readFileSync('employees.json', 'utf-8');
+let json:string;
+
+try {
+    let json:string = fs.readFileSync('employees.json', 'utf-8');
+} catch (e) {
+    console.log('Не найден файл employees.json\nДля генерации запустите generateJson.js');
+    process.exit(1);
+}
+
 let employeesJson: (EmployeeHourlyPaymentJSON | EmployeeMonthlyPaymentJSON)[] = JSON.parse(json);
 let employees: (EmployeeHourlyPayment | EmployeeMonthlyPayment)[] = employeesJson.map(employeeJson => {
     if ((employeeJson as EmployeeMonthlyPaymentJSON).monthsWithSalary != undefined) {
