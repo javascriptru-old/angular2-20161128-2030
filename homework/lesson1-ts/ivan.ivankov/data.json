@@ -1,0 +1,8 @@
+[
+    { "id": 1, "name": "Peter", "salary": 100, "typeSalary": "fix" },
+    { "id": 2, "name": "Vasya", "salary": 1, "typeSalary": "time" },
+    { "id": 3, "name": "Misha", "salary": 150, "typeSalary": "fix" },
+    { "id": 4, "name": "Vanya", "salary": 2, "typeSalary": "time" },
+    { "id": 5, "name": "Olya", "salary": 200, "typeSalary": "fix" },
+    { "id": 6, "name": "Kolya", "salary": 3, "typeSalary": "time" }
+]
