@@ -4,7 +4,7 @@ export namespace Lesson1 {
 // let name1 = 'John';
 // name1 = 10;
 // function sum(a: number, b: number): number {
-//    return a + b;
+//    return a + b;  
 // }
 
 //string
@@ -25,11 +25,11 @@ export namespace Lesson1 {
 
 //void
 //function setName(name: string): void {
-//   this.name = name;
+//   this.name = name; 
 //}
 
 interface IBook {
-  title: string;
+  title: string; 
   open(page: number): void;
 }
 
@@ -57,7 +57,7 @@ class Book implements IBook, IPages {
 
     public open(page: number):void {
       //Book.coverTypes
-      //this.title
+      //this.title 
     }
 }
 
