@@ -1,0 +1,27 @@
+[
+  {
+    "workerId": "fix1",
+    "name": "Иванов И.И.",
+    "rate": 20000
+  },
+  {
+    "workerId": "fix2",
+    "name": "Петров И.И.",
+    "rate": 30000
+  },
+  {
+    "workerId": "fix3",
+    "name": "Сидоров И.И.",
+    "rate": 10000
+  },
+  {
+    "workerId": "fix4",
+    "name": "Пупкин И.И.",
+    "rate": 13000
+  },
+  {
+    "workerId": "fix5",
+    "name": "Петренко И.И.",
+    "rate": 10500
+  }
+]
