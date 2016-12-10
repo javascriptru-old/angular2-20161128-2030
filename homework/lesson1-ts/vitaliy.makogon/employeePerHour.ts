@@ -1,4 +1,4 @@
-import { IEmployee } from './iemploee';
+import { IEmployee } from './iemployee';
 
 export class EmployeePerHour implements IEmployee {
     id;
