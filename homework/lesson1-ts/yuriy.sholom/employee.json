@@ -1,0 +1,12 @@
+[
+  {"id": "1", "name": "Petro", "salary": 3000},
+  {"id": "2", "name": "Ivan", "salary": 2500},
+  {"id": "3", "name": "Bodya", "salary": 1000},
+  {"id": "4", "name": "Yaroslav"},
+  {"id": "5", "name": "Anton", "salary": 2000},
+  {"id": "6", "name": "Mykola", "salary": 5000},
+  {"id": "7", "name": "Vasya", "salary": 800},
+  {"id": "8", "name": "John", "salary": 1500},
+  {"id": "9", "name": "Sergey", "salary": 600},
+  {"id": "10", "name": "Aleksey", "salary": 2300}
+]

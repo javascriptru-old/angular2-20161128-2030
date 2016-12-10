@@ -1,0 +1,12 @@
+[
+    { "name": "Gena", "payment": "7000", "paymentType": "perMonth" },
+    { "name": "Andrey", "payment": "14", "paymentType": "perHour" },
+    { "name": "Elena", "payment": "4200", "paymentType": "perMonth" },
+    { "name": "Roma", "payment": "6700", "paymentType": "perMonth" },
+    { "name": "Toma", "payment": "20", "paymentType": "perHour" },
+    { "name": "Lana", "payment": "4000", "paymentType": "perMonth" },
+    { "name": "Arsen", "payment": "12", "paymentType": "perHour" },
+    { "name": "Masha", "payment": "5300", "paymentType": "perMonth" },
+    { "name": "Valera", "payment": "8700", "paymentType": "perMonth" },
+    { "name": "Kate", "payment": "16", "paymentType": "perHour" }
+]
