@@ -1,0 +1,20 @@
+<div class="element">
+		<div class="element-left">
+			<app-hotels 
+			  [hotelsList]="hotelsList" 
+				[currentHotel]="currentHotel"
+				(onChangeHotel)="changeHotel($event)"
+      >
+			</app-hotels>
+	   </div>
+		<div class="element-right">
+			<app-weather
+			  [currentWeather] = "currentWeather"
+			></app-weather>
+      <app-city
+				[currentCity] = "currentCity"
+			>
+			</app-city>
+
+		</div>
+</div>
