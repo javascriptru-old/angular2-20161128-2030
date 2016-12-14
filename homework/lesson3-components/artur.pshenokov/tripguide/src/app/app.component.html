@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<div class="element">
+  <div class="element-left">
+    <hotels [tripGuides]="tripGuides" (onSelectedHotelToRoot)="onSelectedHotelToRoot($event)"></hotels>
+  </div>
+  <div class="element-right">
+    <weather [weather]="activeTripGuide.weather"></weather>
+    <city [city]="activeTripGuide.city"></city>
+  </div>
+  <div class="clear"></div>
+</div>
+<footer></footer>
+

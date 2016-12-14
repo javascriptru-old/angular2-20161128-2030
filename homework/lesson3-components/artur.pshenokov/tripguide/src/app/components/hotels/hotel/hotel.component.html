@@ -1,0 +1,15 @@
+<div class="activity-row cursor-hand" (click)="selectedHotel(hotel.id)">
+  <div class="activity-desc">
+    <h5>{{hotel.name}}</h5>
+    <p>{{hotel.address}}</p>
+    <p>{{hotel.description}}</p>
+    <h6>Tel.{{hotel.phone}}</h6>
+  </div>
+  <div class="activity-img">
+    <ul>
+      <li><img [src]='hotel.firstAvatarUrl'  alt="img1"/></li>
+      <li><img [src]='hotel.secondAvatarUrl'  alt="img2"/></li>
+    </ul>
+  </div>
+  <div class="clear"> </div>
+</div>
