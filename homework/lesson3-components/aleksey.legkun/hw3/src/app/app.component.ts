@@ -66,7 +66,7 @@ export class AppComponent {
       let fn1 = fn.bind(this); 
       (function p() {
           fn1();
-          setTimeout(() => { p(); }, 1000);
+          setTimeout(() => { p(); }, 5000);
       })();
   }
 
