@@ -1,0 +1,10 @@
+<h1 [style.color]="mainColor">
+  {{user.name}}
+
+<input (input)="user.name = $event.target.value">
+
+
+<app-user [user]="user"
+(onColorChange)="doSomthing($event)"></app-user>
+
+</h1>
