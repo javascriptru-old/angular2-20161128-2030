@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "lib": ["es5","dom","es2015.promise","es2015.iterable","es6"],
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "strictNullChecks": true,
+        "experimentalDecorators": true
+    }
+}
