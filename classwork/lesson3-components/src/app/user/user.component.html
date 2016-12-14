@@ -1,0 +1,10 @@
+<p [style.color]="myColor">
+  Hello, {{user.name}}!
+  Color: {{myColor}}
+</p>
+
+<input type="text" (input)="myColor = $event.target.value" #myInput>
+
+{{myInput.value}}
+
+<button (click)="sendColor()">Click me</button>
