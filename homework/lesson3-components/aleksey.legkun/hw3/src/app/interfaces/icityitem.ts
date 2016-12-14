@@ -1,4 +1,4 @@
-import { IWeatherItem } from './iweather';
+import { IWeatherItem } from './iweatheritem';
 
 
  export interface ICityItem {
