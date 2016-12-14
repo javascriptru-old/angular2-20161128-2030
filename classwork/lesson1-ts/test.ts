@@ -1,4 +1,10 @@
 export namespace Lesson1 {
+
+declare var require: any;
+let items:number[] = require('./items.json');
+console.log(items[0]);
+
+
 //let name : string;
 //let name : string = 'John';
 // let name1 = 'John';
@@ -92,7 +98,7 @@ let summ = (a:number, b:number):number => {
 
 let template = `
 <div>
-${name}
+${summ(1,2)}
 </div>
 `;
 

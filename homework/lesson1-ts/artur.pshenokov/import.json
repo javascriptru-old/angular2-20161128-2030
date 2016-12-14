@@ -1,0 +1,38 @@
+[
+  {
+    "id": "w7",
+    "name": "Sam",
+    "rate": 35000,
+    "type": "fix"
+  },
+  {
+    "id": "w8",
+    "name": "Donald",
+    "rate": 70000,
+    "type": "fix"
+  },
+  {
+    "id": "w9",
+    "name": "Steve",
+    "rate": 8000,
+    "type": "fix"
+  },
+  {
+    "id": "w10",
+    "name": "Ross",
+    "rate": 80000,
+    "type": "fix"
+  },
+  {
+    "id": "w11",
+    "name": "Michael",
+    "rate": 250,
+    "type": "hour"
+  },
+  {
+    "id": "w12",
+    "name": "Rob",
+    "rate": 300,
+    "type": "hour"
+  }
+]

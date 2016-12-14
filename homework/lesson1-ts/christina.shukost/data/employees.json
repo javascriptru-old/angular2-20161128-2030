@@ -1,0 +1,9 @@
+[
+  { "id": "0", "name": "Jon Snow", "isFixed": true, "salary": 5000 },
+  { "id": "1", "name": "Aria Stark", "isFixed": false, "salary": 25 },
+  { "id": "2", "name": "Tyrion Lannister", "isFixed": false, "salary": 15 },
+  { "id": "3", "name": "Jaime lannister", "isFixed": true, "salary": 4000 },
+  { "id": "4", "name": "Sansa Stark", "isFixed": false, "salary": 17 },
+  { "id": "5", "name": "Daenerys Targaryen", "isFixed": true, "salary": 3000 },
+  { "id": "6", "name": "Cersei Lannister", "isFixed": true, "salary": 4000 }
+]

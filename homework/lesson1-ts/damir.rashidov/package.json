@@ -1,0 +1,17 @@
+{
+  "name": "angular2-20161128-2030",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Damir Rashidov",
+  "license": "ISC",
+  "dependencies": {
+    "@types/moment": "^2.13.0",
+    "@types/node": "0.0.2",
+    "console.table": "^0.7.0",
+    "moment": "^2.17.1"
+  }
+}
