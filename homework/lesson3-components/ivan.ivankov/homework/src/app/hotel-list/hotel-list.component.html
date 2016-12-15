@@ -1,0 +1,51 @@
+<div class="activity_box">
+    <div class="scrollbar" id="style-2">
+        <div class="activity-row">
+            <div class="activity-desc" (click)="setCurentItem(0)">
+                <h5>Resort Address</h5>
+                <p>{{hotelList[0].name}}</p>
+                <p>{{hotelList[0].adress}}</p>
+                <h6>Tel:{{hotelList[0].phone}}</h6>
+            </div>
+            <div class="activity-img">
+                <ul>
+                    <li><img src={{hotelList[0].getPhotoUrlSmall()}} alt="" /></li>
+                    <li><img src={{hotelList[0].getPhotoSityUrl()}} alt="" /></li>
+                </ul>
+            </div>
+            <div class="clear"> </div>
+        </div>
+        <div class="activity-row">
+            <div class="activity-desc" (click)="setCurentItem(1)">
+                <h5>Resort Address</h5>
+                <p>{{hotelList[1].name}}</p>
+                <p>{{hotelList[1].adress}}</p>
+                <h6>Tel:{{hotelList[1].phone}}</h6>
+            </div>
+            <div class="activity-img">
+                <ul>
+                    <li><img src={{hotelList[1].getPhotoUrlSmall()}} alt="" /></li>
+                    <li><img src={{hotelList[1].getPhotoSityUrl()}} alt="" /></li>
+                </ul>
+            </div>
+            <div class="clear"> </div>
+        </div>
+        <div class="activity-row">
+            <div class="activity-desc" (click)="setCurentItem(2)">
+                <h5>Resort Address</h5>
+                <p>{{hotelList[2].name}}</p>
+                <p>{{hotelList[2].adress}}</p>
+                <h6>Tel:{{hotelList[2].phone}}</h6>
+                <h6>Tel:{{hotelList[2].getPhotoUrl()}}</h6>
+            </div>
+            <div class="activity-img">
+                <ul>
+                    <li><img src={{hotelList[2].getPhotoUrlSmall()}} alt="" /></li>
+                    <li><img src={{hotelList[2].getPhotoSityUrl()}} alt="" /></li>
+                </ul>
+            </div>
+
+            <div class="clear"> </div>
+        </div>
+    </div>
+</div>
