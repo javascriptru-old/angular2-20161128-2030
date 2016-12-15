@@ -1,0 +1,10 @@
+<div class="element">
+	<div class="element-left">
+		<app-hotels [hotels]="hotels" [hotel]="selectedHotel" (onHotelSelect)="selectHotel($event);"></app-hotels>
+	</div>
+	<div class="element-right">
+		<app-weather [hotel]="selectedHotel"></app-weather>
+		<app-city [hotel]="selectedHotel"></app-city>
+	</div>
+	<div class="clear"></div>
+</div>
