@@ -1,0 +1,16 @@
+<h1>
+  {{title}}
+</h1>
+<div class="element">
+    <div class="element-left">
+        <app-hotels [hotels]="hotels" (onHotelChange)="selectHotel($event)"></app-hotels>
+    </div>
+    <div class="element-right">
+        <app-weather [weather]="selectedHotel.weather"></app-weather>
+        <app-city [city]="selectedHotel.city"></app-city>
+    </div>
+    <div class="clear"> </div>
+</div>
+<div class="copy-right">
+    <p>© 2015 Hot Weather Widget. All rights reserved | Design by  <a href="http://w3layouts.com/" target="_blank">  W3layouts </a></p>
+</div>
