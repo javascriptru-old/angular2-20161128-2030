@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IHotel } from './hotel/hotel.interface';
+import { IWeather } from './weather/weather.interface';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  weather: IWeather;
+
+  updateWeather(hotel: IHotel) {
+    this.weather = hotel.weather;
+  }
 }

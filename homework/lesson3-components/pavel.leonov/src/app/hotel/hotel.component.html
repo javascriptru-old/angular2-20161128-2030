@@ -1,21 +1,19 @@
 <div class="hotel element-left">
-  <div class="element-bg-img"><img src="assets/1.jpg" alt="" class="img-responsive"> </div>
+  <div class="element-bg-img"><img src="{{ data.image }}" alt="" class="img-responsive"> </div>
   <div class="element-left-bottom">
     <div class="ele-strip">
-      <ul>
-        <li><a href="#">Hotel</a></li>
-        <li><a href="#">Fishing</a></li>
-        <li><a href="#">Tours</a></li>
-        <li class="anc-bor"><a href="#">Weather</a></li>
-      </ul>
+      <h2>{{ data.name }}</h2>
     </div>
     <div class="village">
       <h3>List of hotels</h3>
       <span class="line"> </span>
       <div class="activity_box">
         <div class="scrollbar" id="style-2">
-          <app-mini [name]="'Some Hotel 1'"></app-mini>
-          <app-mini [name]="'Some Hotel 2'"></app-mini>
+          <app-mini
+            *ngFor="let hotel of hotels"
+            [hotel]="hotel"
+            (click)="selectHotel(hotel)"
+          ></app-mini>
         </div>
       </div>
     </div>

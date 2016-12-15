@@ -1,2 +1,2 @@
-<app-hotel></app-hotel>
-<app-weather [degree]="20" [location]="'Moscow'" [waterDegree]="12"></app-weather>
+<app-hotel (onChangeHotel)="updateWeather($event)"></app-hotel>
+<app-weather [weather]="weather"></app-weather>

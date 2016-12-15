@@ -1,4 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
+import { IWeather } from './weather.interface';
 
 @Component({
   selector: 'app-weather',
@@ -9,13 +10,8 @@ export class WeatherComponent implements OnInit {
 
   constructor() { }
 
-  @Input('location') location: string;
-
-  @Input('degree') degree: number;
-
-  @Input('waterDegree') waterDegree: number;
+  @Input('weather') data: IWeather;
 
   ngOnInit() {
   }
-
 }
