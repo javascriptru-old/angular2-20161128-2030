@@ -1,0 +1,48 @@
+<h1>
+  {{title}}
+  <!--<div [ngStyle]=""></div>
+  <div [ngClass]="[{'red': !admin}, ]"></div>-->
+
+  <!--<button (click)="show=!show">
+    <span *ngIf="!show">show</span>
+    <span *ngIf="show">hide</span>
+  </button>
+
+  <div *ngIf="show">
+    Something is here!
+  </div>-->
+
+  <ul>
+    <li *ngFor="let user of users|my: minValue">
+      {{i+1}} - {{user}}
+    </li>
+  </ul>
+
+  <input type="text" (input)="minValue = $event.target.value">
+
+  <div>{{100000|currency:'EUR'| slice: 3 }}</div>
+
+  <!--
+    - currency
+    - date
+    - json
+    - slice
+  -->
+
+</h1>
+
+
+<!--
+  1. Components (widget)
+  2. Attribute (extension)
+  3. Structural (*)
+
+  1. out of Box (ngClass, ngIf, ngFor)
+  2. Own 
+
+-->
+
+<!--
+  Pipes
+
+-->
