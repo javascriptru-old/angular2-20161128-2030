@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false, // если true то строгая типизация
+        "sourceMap": false,
+        "noEmitOnError": true, // не компилировать если произошли ошибки
+        "experimentalDecorators": true // чтоб можно было запускать декораторы
+    }
+}

@@ -1,0 +1,45 @@
+a {
+  text-decoration: none;
+}
+a:hover {
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+/*--header start here--*/
+.element {
+  width: 40%;
+  margin: 0 auto 7em;
+}
+
+.element-left {
+  float: left;
+  width:50%;
+}
+.element-right {
+  float: right;
+   width: 35%;
+}
+
+
+/*--meadia quries start here--*/
+@media(max-width:1440px){
+.element-right {  width: 40%;}
+}
+@media(max-width:1366px){
+.element-left {  width: 55%;}
+}
+
+@media(max-width:480px){
+.element-left {  
+  width: 100%;
+  float: none;
+}
+.element-right {
+  width: 100%;
+  float: none;
+  margin: 1.5em 0em 0em 0em;
+
+}
+}
