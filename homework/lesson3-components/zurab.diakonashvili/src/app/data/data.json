@@ -1,0 +1,41 @@
+{
+  "hotel1": {
+    "bigPicture": "1.jpg",
+    "weather": {
+      "cloud": "cloud1",
+      "airDegree": "25",
+      "waterDegree": "22"
+    },
+    "city": {
+      "imageCity": "b1.jpg",
+      "followers": "15000",
+      "following": "2000"
+    }
+  },
+  "hotel2": {
+    "bigPicture": "2.jpg",
+    "weather": {
+      "cloud": "cloud2",
+      "airDegree": "20",
+      "waterDegree": "15"
+    },
+    "city": {
+      "imageCity": "b2.jpg",
+      "followers": "5000",
+      "following": "5000"
+    }
+  },
+  "hotel3": {
+    "bigPicture": "3.jpg",
+    "weather": {
+      "cloud": "cloud3",
+      "airDegree": "30",
+      "waterDegree": "28"
+    },
+    "city": {
+      "imageCity": "b3.jpg",
+      "followers": "5000",
+      "following": "100"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+span.w-line {
+  background: url(app/components/city/images/w-line.png)no-repeat;
+  width: 103px;
+  height: 2px;
+  display: block;
+  margin:0.73em auto 0.72em;
+}

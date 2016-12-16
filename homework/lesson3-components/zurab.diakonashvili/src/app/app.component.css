@@ -1,0 +1,15 @@
+h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+}
+
+.element {
+  width: 40%;
+  margin: 0 auto 7em;
+}
+
+.element-right {
+  float: right;
+   width: 35%;
+}
