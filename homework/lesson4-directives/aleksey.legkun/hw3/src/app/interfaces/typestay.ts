@@ -1,0 +1,1 @@
+export enum TypeStay {All, Common, Fishing, Tours}
