@@ -1,0 +1,26 @@
+<div class="element-left">
+    <div class="element-bg-img">
+        <app-hotel [hotelImage]="hotels[currentItem].getPhotoUrl()"></app-hotel>
+    </div>
+    <div class="element-left-bottom">
+        <div class="ele-strip">
+            <ul>
+                <li><a href="#">Hotel</a></li>
+                <li><a href="#">Fishing</a></li>
+                <li><a href="#">Tours</a></li>
+                <li class="anc-bor"><a href="#">Weather</a></li>
+            </ul>
+        </div>
+        <div class="village">
+            <h3>Righteous indignation & like</h3>
+            <span class="line"> </span>
+            <app-hotel-list [hotelList]="hotels" (onCurentChange)="setCurentHotel($event)"></app-hotel-list>
+        </div>
+    </div>
+    <div class="element-right">
+
+        <app-weather [weather]=hotels[this.currentItem].curentTemperature></app-weather>
+        <app-city [hotel]="hotels[currentItem]"></app-city>
+    </div>
+    <div class="clear"> </div>
+</div>

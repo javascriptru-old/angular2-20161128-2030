@@ -1,0 +1,35 @@
+<div class="element-left">
+  <div class="element-bg-img"><img src={{selectedHotel.imgBig}} alt="" class="img-responsive"> </div>
+  <div class="element-left-bottom">
+    <div class="ele-strip">
+      <ul>
+        <li><a href="#">Hotel</a></li>
+        <li><a href="#">Fishing</a></li>
+        <li><a href="#">Tours</a></li>
+        <li class="anc-bor"><a href="#">Weather</a></li>
+      </ul>
+    </div>
+    <div class="village">
+      <h3>Righteous indignation & like</h3>
+      <span class="line"> </span>
+      <div class="activity_box">
+        <div class="scrollbar" id="style-2">
+          <div class="activity-row" *ngFor="let hotel of hotels" (click)="onHotel(hotel)" >
+            <div class="activity-desc">
+              <h5>{{hotel.name}}</h5>
+              <p>{{hotel.desc01}}</p>
+              <p>{{hotel.desc02}}</p>
+              <h6>Tel:+{{hotel.phone}}</h6>
+            </div>
+            <div class="activity-img">
+              <ul>
+                <li><img src={{hotel.imgUrl01}} alt="" /></li>
+                <li><img src={{hotel.imgUrl02}} alt="" /></li>
+              </ul>
+            </div>
+            <div class="clear"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
