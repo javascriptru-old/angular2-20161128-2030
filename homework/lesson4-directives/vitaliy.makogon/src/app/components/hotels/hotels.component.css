@@ -1,0 +1,10 @@
+span.line {
+  background: url(app/components/hotels/images/line.png)no-repeat;
+  width: 103px;
+  height: 2px;
+  display: block;
+  margin: 0.6em auto 0em;
+}
+.activity-row {
+  cursor: pointer
+}
