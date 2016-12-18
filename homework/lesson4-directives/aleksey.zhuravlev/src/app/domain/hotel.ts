@@ -6,6 +6,7 @@ export class Hotel {
     address: string;
     phone: string;
     city: City;
+    types: string[];
 
     imageTumb: string;
     image: string;

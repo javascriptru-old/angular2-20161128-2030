@@ -76,6 +76,14 @@ function getData(): Hotel[]
         image:'app/city/images/b1.jpg',
         imageTumb:'app/city/images/res.jpg',
         weather: weather[1],
+      },
+      {
+        name:'Harm',
+        followers: 1,
+        following: 1,
+        image:'app/city/images/b1.jpg',
+        imageTumb:'app/city/images/res.jpg',
+        weather: weather[1],
       }
     ];
 
@@ -86,7 +94,8 @@ function getData(): Hotel[]
         phone: '+1285 968 685',
         imageTumb:'app/hotels/images/r1.jpg',
         image:'app/hotels/images/1.jpg',
-        city: cities[0]
+        city: cities[0],
+        types: []
       },
       {
         name: 'Hilton by hampton',
@@ -94,7 +103,8 @@ function getData(): Hotel[]
         phone: '+7 999 999 9999',
         imageTumb:'app/hotels/images/v2.jpg',
         image:'app/hotels/images/v.jpg',
-        city: cities[1]
+        city: cities[1],
+        types: ["Swiming", "Tours"]
       },
       {
         name: 'Piramisa',
@@ -102,7 +112,44 @@ function getData(): Hotel[]
         phone: '+77 222 999 9999',
         imageTumb:'app/hotels/images/r1.jpg',
         image:'app/hotels/images/1.jpg',
-        city: cities[2]
+        city: cities[2],
+        types: ["Swiming", "Tours", "Fishing"]
+      },
+      {
+        name: 'Yuzhniy',
+        address: 'RK 2',
+        phone: '+7 555 999 9999',
+        imageTumb:'app/hotels/images/U2.jpg',
+        image:'app/hotels/images/U.jpg',
+        city: cities[1],
+        types: ["Tours"]
+      },
+      {
+        name: 'Hilton',
+        address: 'alhasis 21',
+        phone: '+77 222 999 9999',
+        imageTumb:'app/hotels/images/res.jpg',
+        image:'app/hotels/images/b1.jpg',
+        city: cities[2],
+        types: ["Swiming", "Tours", "Fishing"]
+      },
+      {
+        name: 'Kair',
+        address: 'alhasis 22',
+        phone: '+77 222 999 9999',
+        imageTumb:'app/hotels/images/res.jpg',
+        image:'app/hotels/images/b1.jpg',
+        city: cities[3],
+        types: ["Swiming", "Fishing"]
+      },
+      {
+        name: 'Pavlin',
+        address: 'alhasis 11',
+        phone: '+77 222 999 9999',
+        imageTumb:'app/hotels/images/res.jpg',
+        image:'app/hotels/images/b1.jpg',
+        city: cities[3],
+        types: ["Swiming", "Tours"]
       }
     ];
 

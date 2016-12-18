@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather/weather.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { CityComponent } from './city/city.component';
+import { ImgviewerDirective } from './imgviewer.directive';
+import { HotelfilterPipe } from './hotelfilter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherComponent,
     HotelsComponent,
-    CityComponent
+    CityComponent,
+    ImgviewerDirective,
+    HotelfilterPipe
   ],
   imports: [
     BrowserModule,

@@ -16,6 +16,9 @@ export class HotelsComponent implements OnInit {
   @Output()
   onChangeHotel = new EventEmitter<Hotel>();
 
+  hotelTypeFilter:string;
+  hotelNameFilter:string;
+
   constructor() { }
 
   ngOnInit() {
