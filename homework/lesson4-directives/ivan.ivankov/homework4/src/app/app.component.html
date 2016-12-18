@@ -1,0 +1,31 @@
+<body>
+    <h1>Hot Weather Widget </h1>
+    <p></p>
+    <div class="element">
+        <div class="element-left">
+            <div class="element-bg-img"><img src={{hotels[currentItem].getPhotoUrl()}} alt="" class="img-responsive" appImageBig> </div>
+            <div class="element-left-bottom">
+                <div class="ele-strip">
+                    <ul>
+                        <li><a href="#">Hotel</a></li>
+                        <li><a href="#">Fishing</a></li>
+                        <li><a href="#">Tours</a></li>
+                        <li class="anc-bor"><a href="#">Weather</a></li>
+                    </ul>
+                </div>
+                <div class="village">
+                    <app-holel-list [hotelList]="hotels" (onCurentChange)="setCurentHotel($event)"></app-holel-list>
+                </div>
+            </div>
+        </div>
+        <div class="element-right">
+            <app-weather [weather]=hotels[this.currentItem].curentTemperature></app-weather>
+            <app-city [hotel]="hotels[currentItem]"></app-city>
+        </div>
+        <div class="clear"> </div>
+    </div>
+    <div class="copy-right">
+        <p>© 2015 Hot Weather Widget. All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank">  W3layouts </a></p>
+    </div>
+
+</body>
