@@ -94,6 +94,7 @@ span.line {
   height: 2px;
   display: block;
   margin: 0.6em auto 0em;
+  margin-bottom: 5px;
 }
 span.w-line {
   background: url(../images/w-line.png)no-repeat;
