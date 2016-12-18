@@ -1,0 +1,38 @@
+			<div class="element-bg-img">
+				<img [src]="currentHotel.bigImg" alt="" class="img-responsive"  appIncreaseImage>
+				<p class="activity-img-text-big">{{currentHotel.name}}<p>
+				</div>
+			<div class="element-left-bottom">
+				<div class="ele-strip">
+					<ul>
+						<li><a href="#" (click)="currentLinkValue=''">All</a></li>
+						<li><a href="#" (click)="currentLinkValue='Fishing'">Fishing</a></li>
+						<li><a href="#" (click)="currentLinkValue ='Tours'">Tours</a></li>
+					</ul>
+				</div>
+				<div class="village">
+					<h3>hotel name filter (like): <input type="text" (input)="filterValue = $event.target.value"></h3>
+					 <span class="line"> </span>
+
+						 <div class="activity_box">
+			        <div class="scrollbar" id="style-2">
+
+                <div *ngFor="let hotel of hotelsList | somefilter: filterValue : currentLinkValue " class="activity-row" (click)="changeHotel(hotel)" >
+                  <div class="activity-desc">
+                    <h5>{{hotel.name}}</h5>
+										<p>Category {{typeStayToString(hotel.typeStay)}}</p>
+                    <p>{{hotel.city.name}}</p>
+                    <p>{{hotel.addr}}</p>
+                    <h6>Tel:{{hotel.phone}}</h6>
+                  </div>
+                  <div class="activity-img">
+                    <ul>
+                      <li><img src='{{hotel.city.imgSmall}}'  alt=""/><p class="activity-img-text">{{hotel.city.name}}<p> </li>
+                      <li><img src='{{hotel.img2}}'  alt=""/><p class="activity-img-text">{{hotel.name}}<p></li>
+                    </ul>
+                  </div>
+                  <div class="clear"> </div>
+                </div>
+		          </div>
+			   </div>
+		</div>
