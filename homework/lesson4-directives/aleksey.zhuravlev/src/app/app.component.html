@@ -1,0 +1,20 @@
+<h1>Hot Weather Widget</h1>
+
+<div class="element">
+		<div class="element-left">
+      <app-hotels [currentHotel]="currentHotel" [hotels]="hotels" (onChangeHotel)="changeHotel($event)"
+></app-hotels>
+    </div>
+		<div class="element-right">
+      <app-weather [weather]="currentWeather"></app-weather>
+      <app-city [city]="currentCity"></app-city>
+		</div>
+	  <div class="clear"> </div>
+</div>
+
+
+
+
+<div class="copy-right">
+			<p>© 2015 Hot Weather Widget. All rights reserved | Design by  <a href="http://w3layouts.com/" target="_blank">  W3layouts </a></p>
+</div>

@@ -1,0 +1,39 @@
+<div class="element-bg-img"><img [src]="currentHotel.image" alt="" class="img-responsive"> </div>
+<div class="element-left-bottom">
+  <div class="ele-strip">
+    <ul>
+      <li><a (click)="hotelTypeFilter=''" href="javascript:void()">All</a></li>
+      <li><a (click)="hotelTypeFilter='Fishing'" href="javascript:void()">Fishing</a></li>
+      <li><a (click)="hotelTypeFilter='Swiming'" href="javascript:void()">Swiming</a></li>
+      <li class="anc-bor"><a (click)="hotelTypeFilter='Tours'" href="javascript:void()">Tours</a></li>
+    </ul>
+  </div>
+  <div class="ele-strip">
+    <input style="width: 100%" (input)="hotelNameFilter = $event.target.value" />
+  </div>
+  <div class="village">
+    <h3>Righteous indignation & like</h3>
+      <span class="line"> </span>
+      <div class="activity_box">
+        <div class="scrollbar" id="style-2">
+
+          <div *ngFor="let hotel of hotels|hotelfilter:hotelNameFilter:hotelTypeFilter" (click)="changeHotelHandler(hotel)" class="activity-row">
+            <div class="activity-desc">
+              <h5>{{hotel.name}}</h5>
+              <p>{{hotel.city.name}}</p>
+              <p>{{hotel.address}}</p>
+              <h6>{{hotel.phone}}</h6>
+            </div>
+            <div class="activity-img">
+              <ul>
+                <li><img [src]='hotel.city.imageTumb' alt="" appImgviewer/></li>
+                <li><img [src]='hotel.imageTumb' alt="" appImgviewer/></li>
+              </ul>
+            </div>
+            <div class="clear"> </div>
+          </div>
+
+        </div>
+      </div>
+  </div>
+</div>
