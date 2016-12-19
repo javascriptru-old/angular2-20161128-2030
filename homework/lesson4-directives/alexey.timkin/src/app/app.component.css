@@ -1,0 +1,174 @@
+.element {
+  width: 40%;
+  margin: 0 auto 7em;
+}
+.clear{
+   clear:both;
+}
+
+/*--meadia quries start here--*/
+@media(max-width:1600px){
+.temperatur {
+    margin-bottom:1.95em;
+}
+}
+@media(max-width:1440px){
+.ele-strip ul li {
+  padding: 0em 0.8em;
+}
+.element-right {
+  width: 40%;
+}
+.element {
+  width: 43%;
+}
+.ele-strip ul li {
+  padding: 0em 0.4em;
+}
+.teddy-text {
+  padding: 1.2em 1em;
+}
+.temperatur {
+    margin-bottom: 1.5em;
+}
+}
+@media(max-width:1366px){
+.element-left {
+  width: 55%;
+}
+.element {
+  width: 44%;
+}
+.temperatur {
+    margin-bottom: 2.5em;
+}
+}
+@media(max-width:1280px){
+.teddy-text h4 {
+  font-size: 0.95em;
+}
+.element {
+  width: 47.5%;
+}
+}
+@media(max-width:1024px){
+.element {
+  width: 58.5%;
+}
+.temperatur {
+    margin-bottom: 2.3em;
+}
+}
+@media(max-width:768px){
+.element {
+  width: 76.5%;
+}
+.temperatur {
+    margin-bottom: 2.1em;
+}
+}
+@media(max-width:736px){
+.temperatur {
+  margin-bottom: 2em;
+}
+}
+@media(max-width:667px){
+.element {
+  width: 85.5%;
+}
+.temperatur {
+  margin-bottom: 2em;
+}
+}
+@media(max-width:640px){
+.element {
+  width: 90.5%;
+}
+.temperatur {
+    margin-bottom:2.3em;
+}
+.teddy-text {
+    padding: 1em 1em;
+}
+}
+@media(max-width:600px){
+.element {
+  width: 94.5%;
+}
+}
+@media(max-width:568px){
+.element {
+  width: 98%;
+}
+}
+@media(max-width:480px){
+.element-left {
+  width: 100%;
+  float: none;
+}
+.element-right {
+  width: 100%;
+  float: none;
+  margin: 1.5em 0em 0em 0em;
+}
+.element {
+  width: 80%;
+}
+h1 {
+  font-size: 1.8em;
+  margin: 1.5em 0em 1em 0em;
+}
+.jspContainer {
+  width: 335px !important;
+}
+.temperatur {
+  margin-bottom: 1.5em;
+}
+}
+@media(max-width:414px){
+
+}
+@media(max-width:384px){
+
+}
+@media(max-width:375px){
+
+}
+@media(max-width:320px){
+h1 {
+  font-size: 1.5em;
+  margin: 1em 0em 1em 0em;
+}
+.element {
+  width: 95%;
+  margin: 0 auto 2em;
+}
+.jspContainer {
+  width: 259px !important;
+}
+.row.row1.scroll-pane.jspScrollable {
+  width: 260px!important;
+}
+.ele-strip ul li a {
+  font-size: 0.9em;
+}
+.top-on1 h4 {
+  font-size: 0.84em;
+}
+.top-on1 h5 {
+  font-size: 0.75em;
+}
+.copy-right p {
+  font-size: 0.85em;
+}
+.activity-desc h5 {
+    color: #000;
+    font-size: 0.95em;
+}
+.activity-desc p {
+    font-size: 0.8em;
+}
+.activity-desc h6 {
+    font-size: 12px;
+}
+}

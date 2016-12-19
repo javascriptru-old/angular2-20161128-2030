@@ -1,0 +1,21 @@
+<div class="element-bg-img"><img src="images/Hotel{{selectedHotel.id}}.jpg" alt="" class="img-responsive"> </div>
+<div class="element-left-bottom">
+  <div class="ele-strip">
+    <ul>
+      <li><a href="#" (click)="onSelectedHotelTypeName('Any');" [class]="selectedHotelType==undefined ? 'selectedType': ''">Any</a></li>
+      <li *ngFor="let hotelType of hotelTypes"><a href="#" (click)="onSelectedHotelTypeName(hotelType);" [class]="selectedHotelTypeName==hotelType ? 'selectedType': ''">{{hotelType}}</a></li>
+    </ul>
+    <input #hotelNameFilter style="width:100%;" (keyup)="0">
+  </div>
+  <div class="village">
+    <h3>Selected: {{selectedHotel.name}}</h3>
+    <span class="line"> </span>
+      <div class="activity_box">
+      <div class="scrollbar" id="style-2">
+        <span *ngFor="let hotel of hotels">
+          <app-hotel *ngIf="(hotel.type===selectedHotelType || selectedHotelType==undefined) && hotel.name.indexOf(hotelNameFilter.value)>=0" [hotel]="hotel" (selectedHotelChanged)="onSelectedHotelChanged($event)"></app-hotel>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

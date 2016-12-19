@@ -15,7 +15,7 @@ class Employee implements IEmployee {
     public averageMonthlyPay: number;
     private _fullNameUpperCase: string;
 
-    get fullNameUpperCase() {//lazy initialization for comparator, other getters and setters are for resetting lazy initialization
+    get fullNameUpperCase() {//lazy field initialization for comparator, other getters and setters are for resetting lazy initialization
         if (!this._fullNameUpperCase) {
             this._fullNameUpperCase = (this._firstName+" "+this._lastName).toUpperCase();
         }
