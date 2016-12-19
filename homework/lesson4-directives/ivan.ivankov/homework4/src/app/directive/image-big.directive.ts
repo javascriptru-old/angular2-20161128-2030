@@ -5,16 +5,14 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 })
 export class ImageBigDirective {
 
- // @HostBinding('class') classBiger = 'element-bg-img';
- // @HostBinding('attr.imageBid') imageBig = false;
-
   constructor() { 
-    //setImageClass();
   }
 
-  /*@HostListener('click') onClick() {
+  /*
+  @HostBinding('class') classBiger = 'element-bg-img';
+  @HostBinding('attr.imageBid') imageBig = false;
+  @HostListener('click') onClick() {
     this.imageBig = !this.imageBig;
-    //setImageClass();
     if (this.imageBig == true ) {
       this.classBiger = 'element-biger-img';
     }
