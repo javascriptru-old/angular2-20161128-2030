@@ -1,0 +1,35 @@
+<div class="element-left">
+  <div class="element-bg-img"><img src="{{ hotel.image }}" alt="{{ hotel.name }}" class="img-responsive"></div>
+  <div class="element-left-bottom">
+    <div class="ele-strip">
+      {{ hotel.name }}
+    </div>
+    <div class="village">
+      <input type="text" [(ngModel)]="filterQuery" placeholder="Input hotel name...">
+      <div class="temperature-filters">
+        <h5>Filtration by temperature</h5>
+        <label>
+          <input type="radio" name="temperature" [(ngModel)]="filterTemperature" value="">
+          All
+        </label>
+        <label>
+          <input type="radio" name="temperature" [(ngModel)]="filterTemperature" value="20">
+          20deg
+        </label>
+        <label>
+          <input type="radio" name="temperature" [(ngModel)]="filterTemperature" value="30">
+          30deg
+        </label>
+      </div>
+      <div class="activity_box">
+        <div class="scrollbar" id="style-2">
+          <hotel-preview
+            *ngFor="let hotel of hotels | hotelsFilter:filterQuery:filterTemperature"
+            [hotel]="hotel"
+            (click)="selectHotel(hotel)"
+          ></hotel-preview>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

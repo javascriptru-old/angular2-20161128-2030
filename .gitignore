@@ -1,3 +1,4 @@
 .gitignore
 .idea/
 homework/**/*.js
+homework/lesson3-components/aleksey.zhuravlev/.editorconfig

@@ -1,0 +1,19 @@
+<div class="activity-row">
+  <div class="activity-desc">
+    <h5>{{ data.name }}</h5>
+  </div>
+  <div class="activity-img">
+    <ul>
+      <li>
+        <img
+          src="{{ data.image }}"
+          alt="{{ data.name }}"
+          zoom
+          [zoom-max-height]="500"
+          [zoom-max-width]="500"
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="clear"> </div>
+</div>

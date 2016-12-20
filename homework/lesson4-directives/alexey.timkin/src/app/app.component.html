@@ -1,0 +1,11 @@
+<h1>Homework App</h1>
+<div class="element">
+  <div class="element-left">
+    <app-hotels [hotels]="hotels" (selectedHotelChanged)="onSelectedHotelChanged($event)"></app-hotels>
+  </div>
+	<div class="element-right">
+    <app-weather [city]="(selectedHotel==undefined)?null:selectedHotel.addressCity"></app-weather>
+    <app-city [city]="(selectedHotel==undefined)?null:selectedHotel.addressCity"></app-city>
+	</div>
+  <div class="clear"> </div>
+</div>
