@@ -1,0 +1,14 @@
+<div class="typeahead">
+  <input
+    #input
+    type="text"
+    class="typeahead__input"
+    placeholder="{{ placeholder }}"
+    (input)="onInput(input.value)">
+  <div class="typeahead__dd" *ngIf="dataList.length > 0">
+    <div class="typeahead__dd-item" *ngFor="let item of dataList">
+      <div class="typeahead__dd-item-avatar"><img class="typeahead__dd-item-img" src="{{ item.avatar }}" alt="{{ item.title }}"></div>
+      <div class="typeahead__dd-item-title">{{ item.title }}</div>
+    </div>
+  </div>
+</div>
