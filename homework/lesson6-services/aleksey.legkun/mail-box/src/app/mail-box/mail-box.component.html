@@ -1,0 +1,9 @@
+<h1>mailboxes</h1>  
+<ul>
+  <li *ngFor="let box of mailBoxes"><a href="#" (click)="changeBox(box)">{{box.title}}</a></li>
+</ul>
+<br>  
+<app-mail-list [currentMailbox] = "currentMailbox" (onError)="onError($event)"></app-mail-list>
+
+ 
+  

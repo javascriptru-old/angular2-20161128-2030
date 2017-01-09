@@ -1,0 +1,14 @@
+<!--<br>
+<li><a href="#" (click)="onClick('clear')">Clear</a></li>
+<li><a href="#" (click)="onClick('boxes')">Gen boxes</a></li>
+<li><a href="#" (click)="onClick('letters')">Gen letters</a></li>
+<br>-->
+
+
+<p class="error" *ngIf="errorMessage">Error: {{errorMessage}}</p>
+<p class="info" *ngIf="infoMessage">Info: {{infoMessage}}</p>
+<br>
+
+<app-typeahead></app-typeahead>
+<br>
+<app-mail-box></app-mail-box>
