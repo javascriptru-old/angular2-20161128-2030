@@ -1,0 +1,21 @@
+<div class="mail-box" *ngIf="_currentMailbox!==undefined">
+  <p>Current box: {{_currentMailbox.title}}</p>
+
+  <div class="mail-items-header" *ngIf="isListMode && letters!==undefined && letters.length>0">
+   <h1>letters</h1>
+   <h3>filter: <input type="text" [ngModel]="filterValue" (input)="filterValue = $event.target.value"></h3>
+  
+  
+   <div class="scrollbar" id="style-1">
+      <ul class="mail-items" *ngFor="let letter of letters | letterFilter: filterValue">
+            <app-mail-item [letter]="letter" (click)="openLetter(letter)" ></app-mail-item>
+        </ul>
+    </div>
+  </div>
+
+  <div class="mail-details" *ngIf="!isListMode">
+      <button (click)="closeLetter()">Back</button>
+      <app-mail-detail [letter]="letterForOpen"></app-mail-detail>
+  </div>
+
+</div>
