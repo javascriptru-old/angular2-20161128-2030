@@ -1,0 +1,46 @@
+.typeahead {
+
+}
+
+.typeahead__input {
+  display: block;
+  border: 0;
+  width: 100%;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #333;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.typeahead__dd {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.typeahead__dd-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 150ms ease-in;
+}
+
+.typeahead__dd-item:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.typeahead__dd-item-avatar {
+  width: 60px;
+  border-radius: 50%;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.typeahead__dd-item-img {
+  max-width: 100%;
+}
+
+.typeahead__dd-item-title {
+  margin-left: 10px;
+}
