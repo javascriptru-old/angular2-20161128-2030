@@ -4,13 +4,11 @@ import {MailboxService, Mailbox} from '../mailbox.service';
 
 @Component({
   selector: 'sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  templateUrl: './sidebar.component.html'
 })
 export class SidebarComponent implements OnInit {
 
   mailboxes:Mailbox[];
-  @Output() onSidebarEmitter = new EventEmitter<Mailbox>();
 
   constructor(private mailboxService:MailboxService) {
   }
@@ -19,12 +17,6 @@ export class SidebarComponent implements OnInit {
     this.mailboxService.getMailboxes()
       .subscribe(mailboxes => {
         this.mailboxes = mailboxes;
-        this.onMailbox(this.mailboxes[0]);
       });
-  }
-
-  onMailbox(mailbox:Mailbox) {
-    console.log('SidebarComponent mailboxId: ' + mailbox._id);
-    this.onSidebarEmitter.emit(mailbox)
   }
 }

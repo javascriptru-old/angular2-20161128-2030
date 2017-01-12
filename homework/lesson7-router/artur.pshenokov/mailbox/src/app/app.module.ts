@@ -13,11 +13,12 @@ import {UserListComponent} from './main-tabs/user-list/user-list.component';
 import {SearchComponent} from './search/search.component';
 import {SettingsComponent} from './main-tabs/settings/settings.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
-import { MainTabsComponent } from './main-tabs/main-tabs.component';
+import {MainTabsComponent} from './main-tabs/main-tabs.component';
+import {LetterResolve} from './letter.resolve';
 
 const routes:Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'mails',},
-  {path: 'mails', component: MailListComponent},
+  {path: '', pathMatch: 'full', redirectTo: 'mails'},
+  {path: 'mails/:id', component: MailListComponent},
   {path: 'users', component: UserListComponent},
   {path: 'settings', component: SettingsComponent},
   {path: '**', pathMatch: 'full', component: PageNotFoundComponent}

@@ -3,8 +3,7 @@ import {MailboxService, Mailbox, Letter} from './mailbox.service'
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
 
@@ -13,14 +12,14 @@ export class AppComponent {
   constructor(private mailboxService:MailboxService) {
   }
 
-  onMailboxSelected(selectedMailbox:Mailbox) {
+  /*onMailboxSelected(selectedMailbox:Mailbox) {
     console.log('AppComponent selected: ' + selectedMailbox._id);
     this.mailboxService.getLettersByMailbox(selectedMailbox._id)
       .do(letters => console.log(letters))
       .subscribe(letters => {
         this.letters = letters;
       });
-  }
+  }*/
 
   onSearchLetters(searchText:string) {
     console.log('searchText: ' + searchText);
