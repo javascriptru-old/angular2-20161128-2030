@@ -3,18 +3,7 @@
     <img src="../assets/img/google.png" alt="Google">
   </div><!-- logo -->
 
-  <div class="search-bar col-sm-6">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-main">
-                <span class="glyphicon glyphicon-search"></span>
-              </button>
-            </span>
-    </div><!-- /input-group -->
-
-    <span class="arrow caret"></span>
-  </div><!-- search-bar -->
+  <search (onSearchEmitter)="onSearchLetters($event)"></search>
 
   <div class="profile col-sm-4">
     <ul class="profile-icons list-inline pull-right">
@@ -54,7 +43,8 @@
       <li>
         <button class="text-btn btn btn-control">
           <strong>More</strong>
-          <span class="caret"></span>
+          <span class="caret">
+          </span>
         </button>
       </li>
     </ul>
@@ -62,9 +52,6 @@
 </div><!-- control-bar -->
 
 <div class="mail row">
-
-  <sidebar (onMailboxEmitter)="onMailboxSelected($event)"></sidebar>
-
-  <mail-list [selectedMailbox]=selectedMailbox></mail-list>
-
+  <sidebar (onSidebarEmitter)="onMailboxSelected($event)"></sidebar>
+  <main-tabs></main-tabs>
 </div><!-- mail -->

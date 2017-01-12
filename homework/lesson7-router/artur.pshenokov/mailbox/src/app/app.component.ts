@@ -6,15 +6,28 @@ import {MailboxService, Mailbox, Letter} from './mailbox.service'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent{
+export class AppComponent {
 
-  selectedMailbox:Mailbox;
+  letters:Letter[];
 
   constructor(private mailboxService:MailboxService) {
   }
 
-  onMailboxSelected(selectedMailbox: Mailbox) {
+  onMailboxSelected(selectedMailbox:Mailbox) {
     console.log('AppComponent selected: ' + selectedMailbox._id);
-    this.selectedMailbox = selectedMailbox;
+    this.mailboxService.getLettersByMailbox(selectedMailbox._id)
+      .do(letters => console.log(letters))
+      .subscribe(letters => {
+        this.letters = letters;
+      });
+  }
+
+  onSearchLetters(searchText:string) {
+    console.log('searchText: ' + searchText);
+    this.mailboxService.getLettersBySearchText(searchText)
+      .do(letters => console.log(letters))
+      .subscribe(letters => {
+        this.letters = letters;
+      });
   }
 }

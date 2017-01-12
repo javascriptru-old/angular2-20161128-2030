@@ -1,6 +1,6 @@
 import {Component, OnInit, Input, OnChanges} from '@angular/core';
 
-import {MailboxService, Mailbox, Letter} from '../mailbox.service';
+import {MailboxService, Mailbox, Letter} from '../../mailbox.service';
 
 @Component({
   selector: 'mail-list',

@@ -28,15 +28,21 @@ export class MailboxService {
       .map((response:Response) => <Mailbox[]>response.json());
   }
 
-  /*getLetters(mailbox:Mailbox) {
-   return this.getLetters()
-   .map(letters => letters.filter(letter => return letter.mailbox === mailbox._id))
-   }*/
+  getLettersByMailbox(mailboxId:number) {
+    return this.getLettersAll()
+      .map(letters => letters.filter(letter => letter.mailbox === mailboxId));
+  }
 
-  getLetters(mailboxId:number) {
+  getLettersBySearchText(searchText:string) {
+    return this.getLettersAll()
+      .map(letters => letters.filter(letter => {
+        return letter.subject.includes(searchText) || letter.body.includes(searchText) || letter.to.includes(searchText);
+      }));
+  }
+
+  private getLettersAll() {
     return this.http
       .get(`${this.requestUrl}/letters`)
       .map((response:Response) => <Letter[]>response.json())
-      .map(letters => letters.filter(letter => letter.mailbox === mailboxId));
   }
 }
