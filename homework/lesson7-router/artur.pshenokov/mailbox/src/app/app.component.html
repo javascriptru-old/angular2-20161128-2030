@@ -1,0 +1,57 @@
+<header class="row">
+  <div class="logo col-sm-2">
+    <img src="../assets/img/google.png" alt="Google">
+  </div><!-- logo -->
+
+  <search (onSearchEmitter)="onSearchLetters($event)"></search>
+
+  <div class="profile col-sm-4">
+    <ul class="profile-icons list-inline pull-right">
+      <li>Nizar</li>
+      <li>
+        <span class="glyphicon glyphicon-th"></span>
+      </li>
+      <li class="bell">
+        <span class="glyphicon glyphicon-bell"></span>
+      </li>
+      <li>
+        <img src="../assets/img/profile.jpg" class="img-circle">
+      </li>
+    </ul>
+  </div><!-- profile -->
+</header>
+
+<div class="control-bar row">
+  <div class="menu col-sm-2">
+    Gmail
+    <span class="caret"></span>
+  </div><!-- menu -->
+
+  <div class="controls col-sm-10">
+    <ul class="control-list list-inline">
+      <li>
+        <button class="btn btn-control">
+          <input type="checkbox" class="mail-select">
+          <span class="caret"></span>
+        </button>
+      </li>
+      <li>
+        <button class="btn btn-control">
+          <span class="glyphicon glyphicon-repeat"></span>
+        </button>
+      </li>
+      <li>
+        <button class="text-btn btn btn-control">
+          <strong>More</strong>
+          <span class="caret">
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div><!-- controls -->
+</div><!-- control-bar -->
+
+<div class="mail row">
+  <sidebar></sidebar>
+  <main-tabs></main-tabs>
+</div><!-- mail -->
