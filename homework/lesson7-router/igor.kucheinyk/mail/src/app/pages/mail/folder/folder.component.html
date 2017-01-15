@@ -1,0 +1,14 @@
+<div class="folder">
+    <ul>
+        <li *ngFor="let letter of data">
+            <a [routerLink]="[letter._id]" routerLinkActive="active">
+                <div class="wrapper">
+                    <div class="from">{{letter.to}}</div>
+                    <div class="subject">{{letter.subject}}</div>
+                    <div class="message">{{letter.message}}</div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<router-outlet></router-outlet>
