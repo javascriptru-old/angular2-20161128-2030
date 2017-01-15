@@ -8,6 +8,6 @@ import 'rxjs/add/operator/map';
 // import 'rxjs/add/observable/of';
 // import 'rxjs/add/observable/fromPromise';
 // import 'rxjs/add/observable/throw';
-import {Observable} from "rxjs/Observable";
+import 'rxjs/Observable';
 import {Subject} from "rxjs/Subject";
-import {BehaviorSubject} from "rxjs/Rx";
+import "rxjs/Rx";
