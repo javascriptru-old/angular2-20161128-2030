@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {MailboxService, Mailbox, Letter} from './mailbox.service'
 
 @Component({
   selector: 'app-root',
@@ -7,9 +6,7 @@ import {MailboxService, Mailbox, Letter} from './mailbox.service'
 })
 export class AppComponent {
 
-  letters:Letter[];
-
-  constructor(private mailboxService:MailboxService) {
+  constructor() {
   }
 
   /*onMailboxSelected(selectedMailbox:Mailbox) {
@@ -21,12 +18,12 @@ export class AppComponent {
       });
   }*/
 
-  onSearchLetters(searchText:string) {
+  /*onSearchLetters(searchText:string) {
     console.log('searchText: ' + searchText);
     this.mailboxService.getLettersBySearchText(searchText)
       .do(letters => console.log(letters))
       .subscribe(letters => {
         this.letters = letters;
       });
-  }
+  }*/
 }

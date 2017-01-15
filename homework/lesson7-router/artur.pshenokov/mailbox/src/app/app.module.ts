@@ -4,17 +4,15 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 
 import {AppComponent} from './app.component';
-import {MailboxService} from './mailbox.service';
-import {SearchComponent} from './search/search.component';
 
 import './rxjs-extensions';
-import { AppRoutingModule, routableComponents } from './app-routing.module';
-import { MailsModule } from './mails/mails.module';
+import {AppRoutingModule, routableComponents} from './app-routing.module';
+import {MailsModule} from './mails/mails.module';
+import {SearchModule} from './search/search.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent,
     routableComponents
   ],
   imports: [
@@ -22,9 +20,9 @@ import { MailsModule } from './mails/mails.module';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    MailsModule
+    MailsModule,
+    SearchModule
   ],
-  providers: [MailboxService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
