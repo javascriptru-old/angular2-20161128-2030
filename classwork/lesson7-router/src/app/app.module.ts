@@ -11,14 +11,16 @@ import { AuthGuardService } from './auth-guard.service';
 
 const routes = [
   {path: '', component: HomeComponent},
-  { path: 'users', 
+  { path: 'users',
     component: UsersComponent,
     //canActivate: [AuthGuardService],
     //resolve: { user: UserResolver}
     data: {user: {name: 'John'}}},
-  { path: 'users', 
+  { path: 'users',
     component: UsersComponent,
-    outlet: 'popup'}
+    outlet: 'popup'},
+
+  { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule' }
 ];
 
 /*
