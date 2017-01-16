@@ -3,11 +3,11 @@
     <img src="../assets/img/google.png" alt="Google">
   </div><!-- logo -->
 
-  <search (onSearchEmitter)="onSearchLetters($event)"></search>
+  <search></search>
 
   <div class="profile col-sm-4">
     <ul class="profile-icons list-inline pull-right">
-      <li>Nizar</li>
+      <li>Artur</li>
       <li>
         <span class="glyphicon glyphicon-th"></span>
       </li>
@@ -52,6 +52,30 @@
 </div><!-- control-bar -->
 
 <div class="mail row">
-  <sidebar></sidebar>
-  <main-tabs></main-tabs>
+  <div class="inbox col-sm-10">
+    <ul class="nav nav-tabs">
+      <li><a [routerLink]="['/mails/inbox']" [routerLinkActive]="['active-tab']" href="">Mails</a></li>
+      <li><a [routerLink]="['/users']" [routerLinkActive]="['active-tab']" href="">Users</a></li>
+    </ul>
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+
+
+  <!--<div>
+    <header>
+      <nav>
+        <ul>
+          <li><a [routerLink]="['/mails']" href="">Mails</a></li>
+          <li><a [routerLink]="['/users']" href="">Users</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <router-outlet></router-outlet>
+      </section>
+    </main>
+  </div>-->
 </div><!-- mail -->

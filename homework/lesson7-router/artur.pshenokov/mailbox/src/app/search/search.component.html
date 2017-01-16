@@ -1,4 +1,4 @@
-<div class="search-bar col-sm-6">
+<!--<div class="search-bar col-sm-6">
   <div class="input-group">
     <input type="text" class="form-control" placeholder="Search for..." [(ngModel)]="searchStr" name="searchStr"
            (keyup)="onSearchLetters()">
@@ -7,7 +7,22 @@
                 <span class="glyphicon glyphicon-search"></span>
               </button>
             </span>
-  </div><!-- /input-group -->
+  </div>
 
   <span class="arrow caret"></span>
-</div><!-- search-bar -->
+</div>-->
+
+<div class="search-bar col-sm-6">
+  <form class="search">
+    <div class="form-group">
+      <input class="form-control" type="text" placeholder="Search mails ..."
+             [(ngModel)]="searchStr" name="searchStr" (keyup)="onSearchLetters()" autocomplete="off">
+      <ul class="results">
+        <li *ngFor="let mail of mails">
+          <a [routerLink]="['/users']">{{mail.to}} - {{mail.subject}}<br/><span>{{mail.body}}</span></a>
+        </li>
+      </ul>
+    </div>
+  </form>
+  <span class="arrow caret"></span>
+</div>

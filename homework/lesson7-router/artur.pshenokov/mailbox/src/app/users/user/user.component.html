@@ -1,0 +1,15 @@
+<article>
+  <div *ngIf="user">
+    <h4>{{user.fullName}} details</h4>
+
+    <div>
+      <label for="nametext">Full name</label>
+      <input type="text" id="nametext" [(ngModel)]="user.fullName" />
+    </div>
+
+    <div>
+      <label for="typetext">Email</label>
+      <input type="text" id="typetext" [(ngModel)]="user.email" />
+    </div>
+  </div>
+</article>

@@ -4,9 +4,14 @@
   </button>
 
   <ul class="inbox-sections list-unstyled">
+    <!--<li *ngFor="let mailbox of mailboxes">
+      <a href="" (click)="sidebarClick(mailbox.title)">{{mailbox.title}}</a>
+    </li>-->
     <li *ngFor="let mailbox of mailboxes">
       <a href="" [routerLink]="['/mails', mailbox.title]" [routerLinkActive]="['active']">{{mailbox.title}}</a>
     </li>
+
+
     <!--<li class="active">
       Inbox (100)
     </li>
