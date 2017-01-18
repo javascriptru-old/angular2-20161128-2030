@@ -27,3 +27,8 @@
 
 [19.01]
 Имя Фамилия - github - github-pages
+Алексей Тимкин:
+  ReST Service: https://github.com/al-tim/movienizer-rest
+  Angular UI: https://github.com/al-tim/movienizer-ui
+  Deployed UI: http://alexeytimkin.synology.me:7070/
+  (индивидуальное задание: поисковая система по базе данных Movienizer)
