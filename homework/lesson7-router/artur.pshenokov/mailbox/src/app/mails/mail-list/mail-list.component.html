@@ -1,0 +1,32 @@
+<ul class="list-unstyled">
+
+  <!--<a href="" [routerLink]="[character.id]">-->
+
+  <li class="email-item row unread" *ngFor="let mail of mails" (click)="onMailClicked(mail)" [routerLink]="[mail._id]">
+    <div class="people col-sm-3">
+      <ul class="mail-icons list-inline">
+        <li>
+          <input type="checkbox" class="mail-select">
+        </li>
+        <li>
+          <span class="glyphicon glyphicon-star-empty"></span>
+        </li>
+        <li>
+          <span class="glyphicon glyphicon-cutlery"></span>
+        </li>
+      </ul>
+        <span class="people-names">
+          {{mail.to}}
+        </span>
+    </div>
+
+    <div class="message col-sm-7">
+      <div class="clipper">
+        <h3>{{mail.subject}}</h3>
+        -
+        <p>{{mail.body}}</p>
+      </div>
+    </div>
+
+  </li>
+</ul>

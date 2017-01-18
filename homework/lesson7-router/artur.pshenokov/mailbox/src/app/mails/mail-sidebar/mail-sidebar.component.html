@@ -1,0 +1,27 @@
+<div class="sidebar col-sm-2">
+  <button class="compose btn btn-danger">
+    Compose
+  </button>
+
+  <ul class="inbox-sections list-unstyled">
+    <!--<li *ngFor="let mailbox of mailboxes">
+      <a href="" (click)="sidebarClick(mailbox.title)">{{mailbox.title}}</a>
+    </li>-->
+    <li *ngFor="let mailbox of mailboxes">
+      <a href="" [routerLink]="['/mails', mailbox.title]" [routerLinkActive]="['active']">{{mailbox.title}}</a>
+    </li>
+
+
+    <!--<li class="active">
+      Inbox (100)
+    </li>
+    <li>Sent Mail</li>
+    <li class="pending">
+      Drafts (7)
+    </li>
+    <li>All Mail</li>
+    <li class="pending">
+      Spam (1)
+    </li>-->
+  </ul>
+</div><!-- sidebar -->

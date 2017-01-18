@@ -1,0 +1,13 @@
+<div class="user">
+    <ul>
+        <li *ngFor="let user of data">
+            <a [routerLink]="[user._id]" routerLinkActive="active">
+                <div class="wrapper">
+                    <div class="subject">{{user.fullName}}</div>
+                    <div class="message">{{user.email}}</div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<router-outlet></router-outlet>

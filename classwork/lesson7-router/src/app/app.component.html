@@ -6,6 +6,8 @@
   <a routerLink="users" routerLinkActive="active">Users</a>
   <a [routerLink]="[{ outlets: { popup: ['users']}}]" routerLinkActive="active">Users in secondary outlet</a>
 
+  <a routerLink="lazy" routerLinkActive="lazy">Lazy</a>
+
   <router-outlet></router-outlet>
   <router-outlet name="popup"></router-outlet>
 </h1>

@@ -18,4 +18,12 @@
 12. Авторизация в приложении
 13. Юнит-тесты
 
-Вариант дизайна - https://github.com/khalifenizar/gmail-clone 
+Вариант дизайна - https://github.com/khalifenizar/gmail-clone
+
+
+[16.01]
+Имя Фамилия - github - github-pages
+
+
+[19.01]
+Имя Фамилия - github - github-pages
