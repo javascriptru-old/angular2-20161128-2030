@@ -1,0 +1,10 @@
+<form [formGroup]="registrationForm">
+      <p *ngIf="showError$|async">Name is invalid.</p>
+      <div formGroupName="name">
+        <input formControlName="first" placeholder="First">
+        <input formControlName="last" placeholder="Last">
+      </div>
+      <input formControlName="email" placeholder="Email">
+      <button>Submit</button>
+    </form>
+<button>Set value</button>
