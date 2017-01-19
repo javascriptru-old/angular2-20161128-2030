@@ -1,0 +1,34 @@
+<div class="logo col-sm-2">
+  <img src="/img/google.png" alt="Google">
+</div><!-- logo -->
+
+<div class="profile col-sm-4" *ngIf = "authService.isLoggedIn">
+  <ul class="profile-icons list-inline pull-right">
+    <li>Some user</li>
+    <li>
+      <img src="/img/profile.jpg" class="img-circle">
+    </li>
+
+    <li>
+      <a routerLink="/mail-box" routerLinkActive="active">
+      <span class="glyphicon glyphicon-th"></span>
+      Mail
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="/address-book" routerLinkActive="active">
+      <span class="glyphicon glyphicon-th"></span>
+      Address
+      </a>
+    </li>
+    <li>
+      <button class="compose btn btn-danger" (click)="login(false)">Logout</button>
+    </li>  
+  </ul>
+</div><!-- profile -->
+
+
+<div class="row"></div>
+
+<router-outlet></router-outlet>

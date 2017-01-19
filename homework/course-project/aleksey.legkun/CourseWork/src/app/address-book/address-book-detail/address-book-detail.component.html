@@ -1,0 +1,38 @@
+<form [formGroup]="form"  novalidate (ngSubmit)="submitForm(form)">
+
+  <div class="control-bar row">
+    <div class="controls col-sm-10">
+      <ul class="control-list list-inline">
+        <li>
+          <button class="text-btn btn btn-control" (click)="back(true)" [disabled]="!isEnableForm"><strong>Back</strong></button>
+        </li>
+
+        <li>
+          <button class="text-btn btn btn-control" type="submit" class="btn btn-default" [disabled]="isSaveDisable()" ><strong>Save</strong></button>
+        </li>
+
+        <li>
+          <button class="text-btn btn btn-control" (click)="delete()" [disabled]="!isEnableForm"><strong>Delete</strong></button>
+        </li>            
+      </ul>
+      </div><!-- controls -->
+    </div><!-- control-bar -->
+
+    <div class="form-group" [ngClass]="{'has-error':!form.controls['fullName'].valid}">
+      <label>Full name:</label>
+      <input class="form-control" type="text" placeholder="Full name" [formControl]="form.controls['fullName']" >
+      <div *ngIf="form.controls['fullName'].hasError('required') && form.controls['fullName'].touched" class="alert alert-danger">You must include a name.</div>      
+    </div>
+
+    <div class="form-group" [ngClass]="{'has-error':!form.controls['email'].valid}">
+      <label>Email:</label>
+      <input class="form-control" type="text" placeholder="Email" [formControl]="form.controls['email']">
+
+      <div *ngIf="!form.controls['email'].valid && form.controls['email'].touched" class="alert alert-danger">
+           <p *ngIf="form.controls['email'].hasError('required')">Email addressis required.</p>
+           <p *ngIf="form.controls['email'].hasError('invalidEmailAddress')">Email format is invalid.</p>
+       </div>
+    </div>    
+
+    <div *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
+</form>    
