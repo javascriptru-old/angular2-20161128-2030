@@ -1,0 +1,50 @@
+<div class="sidebar col-sm-2">
+                
+<form [formGroup]="form"  novalidate (ngSubmit)="submitForm(form)" >
+
+
+  <div class="control-bar row">
+    <div class="controls col-sm-10">
+      <ul class="control-list list-inline">
+        <li>
+          <button class="text-btn btn btn-control" (click)="back(true)" [disabled]="!isEnableForm"><strong>Back</strong></button>
+        </li>
+
+        <li *ngIf="_isNew" >
+          <button class="text-btn btn btn-control" type="submit" class="btn btn-default" [disabled]="isSaveDisable()" ><strong>Save</strong></button>
+        </li>
+
+        <li *ngIf="!_isNew">
+          <button class="text-btn btn btn-control" (click)="delete()" [disabled]="!isEnableForm"><strong>Delete</strong></button>
+        </li>            
+      </ul>
+      </div><!-- controls -->
+    </div><!-- control-bar -->
+
+
+
+
+    <div class="form-group" [ngClass]="{'has-error':!form.controls['subject'].valid}">
+      <label>Subject:</label>
+      <input class="form-control" type="text" placeholder="Subject"   [formControl]="form.controls['subject']" >
+      <div *ngIf="form.controls['subject'].hasError('required') && form.controls['subject'].touched" class="alert alert-danger">You must include a subject.</div>      
+    </div>
+
+    <div class="form-group" [ngClass]="{'has-error':!form.controls['to'].valid}">
+      <label>Email:</label>
+      <input class="form-control" type="text" placeholder="To" [(ngModel)]="mailTo" [ngModelOptions]="{standalone: true}"  typeahead [typeaheadService]="addressBookService">
+
+      <div *ngIf="!form.controls['to'].valid && form.controls['to'].touched" class="alert alert-danger">
+           <p *ngIf="form.controls['to'].hasError('required')">Email addressis required.</p>
+           <p *ngIf="form.controls['to'].hasError('invalidEmailAddress')">Email format is invalid.</p>
+       </div>
+    </div>    
+
+    <div class="form-group" [ngClass]="{'has-error':!form.controls['body'].valid}">
+      <label>Body:</label>
+      <input class="form-control" type="text" placeholder="Body" [formControl]="form.controls['body']" >
+      <div *ngIf="form.controls['body'].hasError('required') && form.controls['body'].touched" class="alert alert-danger">You must include a body.</div>      
+    </div>
+    <div *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
+</form>    
+</div>

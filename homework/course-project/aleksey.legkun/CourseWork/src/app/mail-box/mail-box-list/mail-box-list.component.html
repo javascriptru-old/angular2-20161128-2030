@@ -1,0 +1,68 @@
+    <div class="mail row">
+        <div class="control-bar row">
+            <div class="controls col-sm-10">
+              <ul class="control-list list-inline">
+   
+                <li>
+                  <button class="btn btn-control" (click)="refreshExt()">
+                    <span class="glyphicon glyphicon-repeat"></span>
+                  </button>
+                </li>
+                <li>
+                  <button class="text-btn btn btn-control" (click)="onNew()"><strong>New</strong></button>
+                </li>
+                <li>
+                  <button class="text-btn btn btn-control" (click)="delete()"><strong>Delete</strong></button>
+                </li>         
+                <li>
+                  <button class="text-btn btn btn-control" (click)="generate()"><strong>Gen</strong></button>
+                </li>                 
+              </ul>
+            </div><!-- controls -->
+          </div><!-- control-bar -->
+        
+        <div class="search-bar col-sm-6">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for..." [ngModel]="filterValue" (input)="filterValue = $event.target.value">
+            <span class="input-group-btn">
+              <button class="btn btn-main">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div><!-- /input-group -->
+          <span class="arrow caret"></span>
+        </div><!-- search-bar -->      
+
+      
+        <div class="inbox col-sm-12">
+          <ul class="list-unstyled" *ngFor="let item of items | letterFilter: filterValue">
+            <li class="email-item row" (click)="navigate(item._id)">
+
+              <div class="people col-sm-3">
+                
+                <ul class="mail-icons list-inline">
+                  <li>
+                    <input type="checkbox" class="mail-select" (click)="onClicked(item._id)">
+                  </li>
+                  <li>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                  </li>
+                  <li>
+                    <span class="glyphicon glyphicon-cutlery"></span>
+                  </li>
+                </ul>
+
+                <span class="people-names">{{item.to}}</span>
+              </div><!-- people -->
+
+              <div class="message col-sm-7">
+                <div class="clipper">
+                  <h3>{{item.subject}}</h3>
+                </div>
+              </div><!-- message -->
+            </li>
+         </ul>
+        </div><!-- inbox -->
+  </div>
+      
+  

@@ -1,0 +1,37 @@
+      <div class="control-bar row">
+
+        <div class="controls col-sm-10">
+          <ul class="control-list list-inline">
+            <li>
+              <button class="btn btn-control">
+                <span class="glyphicon glyphicon-repeat"></span>
+              </button>
+            </li>
+            <li>
+              <button class="text-btn btn btn-control" (click)="onNew()">
+                <strong>New</strong>
+              </button>
+            </li>
+          </ul>
+        </div><!-- controls -->
+      </div><!-- control-bar -->
+
+
+
+        <div class="inbox col-sm-10">
+          <ul class="list-unstyled" *ngFor="let item of items">
+            <li class="email-item row">
+            <div (click)="navigate(item._id)">
+              <div class="people col-sm-3">
+                <span class="people-names">{{item.fullName}}</span>
+              </div><!-- people -->
+              <div class="message col-sm-7">
+                <div class="clipper">
+                  <h3>{{item.email}}</h3>
+                </div>
+              </div><!-- message -->
+             </div>
+              <button (click)="delete(item)">Delete</button>
+            </li>
+         </ul>
+        </div><!-- inbox -->

@@ -1,0 +1,10 @@
+<h1>Mail</h1>
+
+  <div class="mail row">
+    <div class="sidebar col-sm-2">
+    <ul class="inbox-sections list-unstyled" *ngFor="let item of items">
+      <li class="pending" (click)="navigate(item.title)" >{{item.title}}</li>
+    </ul>
+  </div>
+  <router-outlet></router-outlet>    
+  </div>    

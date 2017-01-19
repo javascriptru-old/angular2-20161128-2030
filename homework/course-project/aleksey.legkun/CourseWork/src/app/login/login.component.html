@@ -1,0 +1,13 @@
+  <div class="profile col-sm-2" *ngIf = "!authService.isLoggedIn">
+    <ul class="profile-icons list-inline pull-right">
+      <li>
+        <input type="text" placeholder="login" >
+      </li>  
+      <li>
+        <input type="password" placeholder="password" >
+      </li>  
+      <li>
+        <button class="compose btn btn-danger" (click)="login(true)">Login</button>
+      </li>  
+      </ul>
+  </div>
