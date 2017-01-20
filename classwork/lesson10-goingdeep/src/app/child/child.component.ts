@@ -45,9 +45,13 @@ export class ChildComponent implements OnChanges, OnInit, DoCheck, AfterContentI
     this.log.emit(`onInit`);
   }
 
+  //ng1 - watch()
   ngDoCheck() {
     this.log.emit(`doCheck`);
   }
+
+  //Content - compoent inner content
+  //View - template
 
   ngAfterContentInit() {
     this.log.emit(`afterContentInit`);

@@ -32,7 +32,7 @@ import { AuthGuardService } from './services/auth-guard.service';
 
 
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
 
   { path: '',   redirectTo: '/mail-box', pathMatch: 'full' },
   { path: 'login',   component: LoginComponent },
@@ -46,11 +46,11 @@ const appRoutes: Routes = [
     children: [
       { path: '',  component: AddressBookListComponent},
       { path: ':id',  component: AddressBookDetailComponent
-         
+
       }
     ]
   },
-  
+
   {
     path: 'mail-box', component: MailBoxComponent,
     canLoad: [AuthGuardService],

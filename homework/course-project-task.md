@@ -32,3 +32,12 @@
   Angular UI: https://github.com/al-tim/movienizer-ui
   Deployed UI: http://alexeytimkin.synology.me:7070/
   (индивидуальное задание: поисковая система по базе данных Movienizer)
+
+Гнатюк Ярослав:
+  hithub: https://github.com/jaroslavgnatjuk/courseProject
+  github-pages: https://jaroslavgnatjuk.github.io/courseProject/dist/
+
+[позже]
+Имя Фамилия - github - github-pages
+
+

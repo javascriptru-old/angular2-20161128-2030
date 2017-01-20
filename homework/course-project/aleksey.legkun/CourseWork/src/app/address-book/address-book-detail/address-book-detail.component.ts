@@ -8,6 +8,8 @@ import "rxjs/add/operator/debounceTime";
 import "rxjs/add/operator/distinctUntilChanged";
 import "rxjs/add/operator/switchMap";
 import 'rxjs/add/observable/of';
+import 'rxjs/add/observable/catch';
+import 'rxjs/add/observable/pluck';
 import { ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 
@@ -22,14 +24,14 @@ import { FormHelper } from './../../helpers/form-helper';
 
 })
 export class AddressBookDetailComponent implements OnInit {
- 
+
   private form : FormGroup;
   private errorMessage: any;
 
   private setValueToForm(obj: any){
     FormHelper.setValue(this.form, obj)
   }
-  
+
   private _isEnableForm: boolean;
   set isEnableForm (value: boolean)
   {
@@ -42,8 +44,8 @@ export class AddressBookDetailComponent implements OnInit {
      return this._isEnableForm;
   }
 
-  constructor(formBuilder: FormBuilder, 
-              private dataService: AddressBookService, 
+  constructor(formBuilder: FormBuilder,
+              private dataService: AddressBookService,
               private route: ActivatedRoute,
               private location: Location) {
 
@@ -54,24 +56,16 @@ export class AddressBookDetailComponent implements OnInit {
         })
 
     this.form.valueChanges.subscribe(data=> {
-        if(this.errorMessage) 
+        if(this.errorMessage)
           this.errorMessage = undefined
-        } 
+        }
       )
     this.isEnableForm = true;
   }
 
   ngOnInit() {
-     this.route.params.subscribe((params)=>{
-
-       this.dataService.getById(params['id']).subscribe(
-            data => {
-                        this.setValueToForm(data);
-                    },
-            error => {this.errorMessage = error;}
-            );
-
-    });
+     this.route.params.pluck('id').switchMap( id => this.dataService.getById(id))
+       .subscribe(data => this.setValueToForm(data)).catch((error) => {this.errorMessage = error;});
   }
 
   isSaveDisable()
@@ -121,6 +115,6 @@ back(notCheck: boolean = false) {
                           error => {
                             this.errorMessage = error;}
                           );
-  }  
+  }
 
 }

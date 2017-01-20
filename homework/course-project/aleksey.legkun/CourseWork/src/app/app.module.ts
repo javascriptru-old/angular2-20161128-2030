@@ -63,20 +63,17 @@ import { TypeaheadDirective } from './directives/typeahead.directive';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [
-    {provide: ResponseService, useClass: ResponseService},
-    {provide: GlobvarService, useClass: GlobvarService},
-    {provide: AddressBookService, useClass: AddressBookService},
+  providers: [ResponseService, GlobvarService, AddressBookService,
     {provide: MailBoxService, useClass: MailBoxService},
-    
+
     {provide: LetterService, useClass: LetterService},
     {provide: GeneratorService, useClass: GeneratorService},
     {provide: AuthService, useClass: AuthService},
     {provide: AuthGuardService, useClass: AuthGuardService},
-   
+
     {provide: FormBuilder, useClass: FormBuilder}
-    
-    
+
+
   ],
   bootstrap: [AppComponent]
 })
